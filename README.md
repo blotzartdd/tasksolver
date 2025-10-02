@@ -33,8 +33,13 @@ Clients can send an HTTP GET request to `/get_status` with the following body:
 
 where id is the task identifier obtained earlier. The server will return a response:
 ```json
-{"status": "WAIT/RUNNING/SUCCESS/ERROR", "meta": {"created_at": "2024-11-10 00:00:00Z",
-    "started_at": "2024-11-10 00:00:00Z", "finished_at": "2024-11-10 00:00:00Z"}, "result": {"stdout": "...", "stderr": "..."}}
+{"status": "WAIT/RUNNING/SUCCESS/ERROR",
+ "meta": {
+  "created_at": "2024-11-10 00:00:00Z",
+  "started_at": "2024-11-10 00:00:00Z",
+  "finished_at": "2024-11-10 00:00:00Z"
+ },
+ "result": {"stdout": "...", "stderr": "..."}}
 ```
 - `status` — current task status: WAIT (in queue), RUNNING (executing), SUCCESS (completed successfully), ERROR (error).
 
