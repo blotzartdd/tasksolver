@@ -14,7 +14,7 @@ Send an HTTP POST request to `/create_task` with a message body in the following
 ```
 where:
 - `type` — the task type, either python for Python scripts or bin for binary files.
-- `file`` — the Python program code or a binary file, encoded in base64.
+- `file` — the Python program code or a binary file, encoded in base64.
 - `args` — the arguments for program execution.
 
 The server returns a JSON with the task identifier:
